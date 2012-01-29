@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Conway's Game of Life in Processing.js</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="lib/processing-0.8.min.js"></script>
+    <script>
+    // disable space-scroll
+    window.onkeydown = function(e) {
+      if (e.keyCode === 32) {
+       return false;
+      }
+    };
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>Conway's Game of Life</h1>
+      </header>
+      <canvas datasrc="js/conway.pjs" width="500" height="500"></canvas>
+      <article>
+        <section>
+          <p>Click anywhere to turn the cell on. After you set up your design, press space to see how it evolves</p>
+        </section>
+        <section>
+          <h2>Controls</h2>
+          <p>Spacebar: start/stop</p>
+          <p>'c': clear</p>
+          <p>'h': highlight newly created life (toggle)</p>
+          <p>'g': make a glider gun</p>
+        </section>
+      </article>
+    </div>
+</html>
